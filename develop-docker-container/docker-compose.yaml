@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  backend:
+    container_name: backend
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ${PROJECTFOLDER}:/var/project
+
+networks:
+  default:
+    name: internal
