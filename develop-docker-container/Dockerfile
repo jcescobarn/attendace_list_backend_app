@@ -4,4 +4,6 @@ RUN apt update
 
 RUN npm i -g @nestjs/cli
 
-CMD ["sleep","3000000"]
+WORKDIR /var/project/
+
+CMD ["npm","run","start:dev"]
